@@ -5,7 +5,7 @@ from .DsTer import DsTer
 from .proposed import Main
 
 def model_generator(method, pretrained_model_path=None):
-    elif method == 'dster':
+    if method == 'dster':
         model = DsTer(in_chans=4,out_chans=103,window_size=8, depths=[6, 6, 6, 6],embed_dim=90, num_heads=[6, 6, 6, 6]).cuda()
     elif method == 'hscnn_plus':
         model = HSCNN_Plus().cuda()
